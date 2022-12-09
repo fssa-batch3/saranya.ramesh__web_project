@@ -119,12 +119,10 @@ a.navigation_list{
     font-size: 16px;
     border: none;
   }
-  
   .dropdown {
     position: relative;
     display: inline-block;
   }
-  
   .dropdown-content {
     display: none;
     position: absolute;
@@ -272,11 +270,14 @@ a.navigation_list{
     font-size:3pc;
   
   }
+  .category-para:hover{
+    transform:scale(1.1)
+  }
   .category-box{  
     margin-top:20px;
     box-shadow: 10px;
     position:relative;
-    bottom:700px;
+    bottom:750px;
   }
   .b-img{
     opacity: 0.5;
@@ -287,4 +288,7 @@ a.navigation_list{
   .lower-sec{
     position:relative;
     bottom:700px;
+  }
+  a{
+    text-decoration:none;
   }
