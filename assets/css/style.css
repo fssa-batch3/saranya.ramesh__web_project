@@ -5,6 +5,7 @@
 
 video{
   filter: brightness(0.5);
+  
 }
 .search-bar{
   position:relative;
@@ -124,13 +125,13 @@ video{
 
 
 
-.section-flex{
+#section-flex{
   margin-top:-760px;
   padding-top:50px;
   
  
 }
-.section-flex h1{
+#section-flex h1{
   text-align: center;
   font-family:'Roboto', sans-serif;
   font-size: 40px;
@@ -152,6 +153,12 @@ video{
   border-color:palegoldenrod;
   border-radius:50px;
 }
+.border-box:hover{
+  box-shadow:5px 5px 5px grey;
+  transform:scale(1.1);
+  transition:0.5s;
+}
+
 .border-box p{
   font-family: 'Roboto Slab', serif; 
 }
@@ -159,8 +166,6 @@ video{
   font-family:'Roboto', sans-serif ;
   color:rgb(0, 0, 0);
 }
-
-
 
 .flex-3 h1{
   text-align: center;
@@ -181,10 +186,21 @@ video{
   margin-bottom:-20px;
   
 }
+.images:hover{
+  box-shadow:5px 5px 5px grey;
+  transform:scale(1.1);
+  transition:0.5s;
+}
+
 .images-1{
   position:relative;
   bottom:20px;
   left: 30px;
+}
+.images-1:hover{
+  box-shadow:5px 5px 5px grey;
+  transform:scale(1.1);
+  transition:0.5s;
 }
 
 .flex-img h2{
@@ -236,6 +252,10 @@ video{
   border-color:palegoldenrod;
   border-radius:px;
 }
+.border-box-2:hover{
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
 .border-box-2 p{
   font-family: 'Roboto Slab', serif; 
 }
@@ -273,6 +293,10 @@ video{
 }
 .footer_2 li{
   padding:10px;
+  color:white;
+}
+.footer_2 a{
+  text-decoration: none;
 }
 .input{
   width:400px;

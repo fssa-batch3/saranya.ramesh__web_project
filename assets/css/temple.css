@@ -1,9 +1,8 @@
-
-
 font-family: 'Fira Sans', sans-serif;
 font-family: 'Lato', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif;
+
 *{
     box-sizing: border-box;
 }
@@ -20,6 +19,9 @@ font-family: 'Roboto Slab', serif;
     display:flex;
     
 }
+.header-1 p{
+    color:white;
+}
 .navbar{
     position:absolute;
     top:20px;
@@ -29,35 +31,21 @@ font-family: 'Roboto Slab', serif;
     display:flex;
     list-style: none;
     text-decoration: none;
+    
 }
 .navbar a{
     text-decoration: none;
-    color:black;
+    color:white;
     align-content: space-between;  
 }
 .navbar li{
     padding:15px;
+
+}
+.navbar-1{
+    color:white;
 }
 
-.flex-img{
-    display:flex;
-    justify-content:space-between;
-}
-.sec-1{
-    margin-top:200px;
-    background-image: url(../beachnew.jpg);
-}
-.header{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:80px;
-    padding: 20px;
-    color:rgb(45, 93, 142);
-    padding-top:50px;
-    text-align: center;
-}
-.header:hover{
-    scale: 1.08;
-}
 .head{
     font-family: Arial, Helvetica, sans-serif;
     font-size:5pc;
@@ -70,11 +58,12 @@ font-family: 'Roboto Slab', serif;
     padding-bottom:20px;
     font-size:40px;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 .box{
     border-style: solid;
-    height:600px;
-    width:500px;
+    height:550px;
+    width:550px;
     border-color:#3e5f87;
     box-shadow: 10px 10px ;
     text-align: center;
@@ -89,10 +78,11 @@ font-family: 'Roboto Slab', serif;
 .box p{
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
 .box-2{
     border-style: solid;
-    height:600px;
-    width:500px;
+    height:550px;
+    width:550px;
     padding:10px;
     font-size:20px;
     background-color:white;
@@ -112,14 +102,78 @@ font-family: 'Roboto Slab', serif;
     display:flex;
     justify-content: center;
 }
-.below-img{
-  
+
+.flex-img{
+    background-color: aliceblue;
+    display:flex;
+    margin:50px;
+    margin-top:200px;
+    margin-bottom:200px;
+}
+.header{
+    justify-content: center;
+    padding-top:20px 50px;
+    color:brown;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 500px;
+}
+.header:hover{
+    scale:1.08;
+}
+.flex-image img{
+    border-radius:50px 0px;
+}
+
+.flex-img{
+    display:flex;
+    justify-content:space-around;
     
-    margin-top:150px;
+}
+.snake_park:hover{
+    box-shadow:5px 5px 5px grey;
+    transform:scale(1.1);
+    transition:0.5s;
+
+
+}
+
+.flex-img p{
+    font-size: 20px;
+    color:#3e5f87;
+    max-width:600px;
+    font-family: 'Roboto Slab', serif;
+}
+.flex-img h2{
+    font-size: 30px;
+    color:#152942;
+    max-width:600px;
+    font-family: 'Roboto Slab', serif;
+}
+.flex-img img{
+    border-radius:0px 50px ;
+}
+.banner{
+    margin-top:100px;
+}
+
+.below-img{
+    margin-top:100px;
     text-align: center;
 }
 .img1{
     padding:40px;
+}
+.img1:hover{
+    scale:1.08;
+    transition: 0.5s;
+}
+.lower-sec h1{
+    text-align: center;
+    margin-top:100px;
+    font-size:70px;
+    font-family: 'Roboto', sans-serif;
+    color:brown;
 }
 
 .footer{
@@ -130,31 +184,39 @@ font-family: 'Roboto Slab', serif;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:white;
     background-color: rgb(60, 60, 107);
-    border-color: rgb(60, 60, 107);
-  }
+}
   
-  .flex-footer{
+.flex-footer{
     display:flex;
   
-  }
-  .flex-footer img{
+}
+.flex-footer img{
       margin-top:10px;
-  }
-  .flex-footer h4{
+}
+.flex-footer h4{
     margin-top:35px;
-  }
-  .footer_2 li{
+}
+.footer_2 li{
     padding:10px;
-  }
-  .input{
+    color:white;
+}
+
+.footer_2 a{
+    text-decoration: none;
+}
+
+.input{
     width:400px;
     height:50px;
-  }
-  .btn-1{
+}
+.btn-1{
     position:relative;
     right:90px;
     padding:10px 20px;
     color: antiquewhite;
     background-color: rgb(133, 91, 173);
     border-color: rgb(133, 91, 173);
-  }
+}
+  
+
+

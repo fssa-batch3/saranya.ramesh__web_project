@@ -54,11 +54,6 @@ font-family: 'Roboto Slab', serif;
     margin:100px;
     padding:20px;
 }
-.flex:hover{
-    box-shadow:5px 5px 5px grey;
-    transform:scale(1.1);
-    transition:0.5s;
-}
 .para{
     padding:0px 50px;
     max-width: 500px;
@@ -80,11 +75,6 @@ font-family: 'Roboto Slab', serif;
     border-width: 2px;
     margin:100px;
     padding:20px;
-}
-.flex-2:hover{
-box-shadow:5px 5px 5px grey;
-transform:scale(1.1);
-transition:0.5s;
 }
 .para-2{
     padding:0px 50px;
@@ -126,6 +116,10 @@ transition:0.5s;
   }
   .footer_2 li{
     padding:10px;
+    color:white;
+  }
+  .footer_2 a{
+    text-decoration: none;
   }
   .input{
     width:400px;
