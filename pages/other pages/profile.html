@@ -1,0 +1,75 @@
+<!-- Add icon library -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>profile page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../assets/css/profile.css">
+</head>
+
+<body>
+  <div class="card">
+    <img src="../../assets/images/img_avatar2.png" alt="John" style="width:50%">
+
+    <form>
+      <label>First name : </label>
+      <input type="text" id="first_name" pattern="[a-z A-Z]+" required readonly>
+
+      <label>Last name : </label>
+      <input type="text" id="last_name" pattern="[a-z A-Z]+" required readonly>
+
+      <label>Email : </label>
+      <input type="email" id="email" required disabled>
+
+      <button type="submit"> <a href="../other pages/edit profile.html">Edit</a></button>
+      <p><button type="submit" onclick="del(event)"> Delete </button></p>
+
+    </form>
+  </div>
+  <script>
+    let users = JSON.parse(localStorage.getItem('users'));
+    let unique_id = JSON.parse(localStorage.getItem('unique_id'));
+
+    function profile_data(e) {
+      return e.email == unique_id;
+    }
+
+    let user_data = users.find(profile_data);
+
+    document.getElementById("first_name").value = user_data["first_name"];
+    document.getElementById("last_name").value = user_data["last_name"];
+    document.getElementById("email").value = user_data["email"];
+
+    function del(event) {
+
+      if (confirm("Are you sure you want to delete your profile")) {
+        let users = JSON.parse(localStorage.getItem('users'));
+        let unique_id = JSON.parse(localStorage.getItem('unique_id'));
+        []
+        function profile_data(e) {
+          return e.email == unique_id;
+        }
+        let user_data = users.find(profile_data);
+
+        let indexOfUser = users.indexOf(user_data);
+
+        console.log(indexOfUser);
+
+        users.splice(indexOfUser, 1);
+        console.log(users);
+        localStorage.setItem("users", JSON.stringify(users));
+      }
+
+      function logout(e) {
+        localStorage.setItem('unique_id', " ");
+        window.location.href = ".index.html";
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -55,24 +55,46 @@
                 <h1 class="heading"> Contact Us </h1>
                 <div>
                     <option class="font">NAME*</option>
-                    <input class="box"/> 
+                    <input class="box" id="name" /> 
                 </div>
                 <div>
-                    <option class="font">EMAIL*</option>
-                    <input class="box"/> 
+                    <option type="email" class="font">EMAIL*</option>
+                    <input class="box" id="email" /> 
     
                 <div>
-                    <option class="font">Subject*</option>
-                    <input class="box"/> 
+                    <option type="text" class="font">Subject*</option>
+                    <input class="box" id="subject" /> 
                 </div>
                 <div>
                     <option class="font">MESSAGE*</option>
-                    <input class="box-big"/>   
+                    <input class="box-big" id="message"/>   
                 </div> 
-                    <button class="btn1" type="button" >Send Message</button>  
+                    <button class="btn1" type="submit" onclick="submit()"> Send Message</button>
             </form>
         </div>
         </div>
     </section>
+    <script>
+
+    function submit(){
+        const email = document.getElementById("name").value
+        const name = document.getElementById("email").value
+        const subject = document.getElementById("subject").value
+        const message = document.getElementById("message").value
+
+        console.log(name)
+        console.log(email)
+        console.log(subject)
+        console.log(message)
+
+    localStorage.setItem("email",email)
+    localStorage.setItem("name",name)
+    localStorage.setItem("subject",subject)
+    localStorage.setItem("message",message)
+
+    window.location.href= "../other page/login.html"
+
+    }
+    </script>
 </body>
 </html>
