@@ -4,9 +4,6 @@ font-family: 'Fira Sans', sans-serif;
 font-family: 'Lato', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif;
-
-
-
 *{
     box-sizing: border-box;
 }
@@ -188,6 +185,10 @@ font-family: 'Roboto Slab', serif;
     background-color: rgb(133, 91, 173);
     border-color: rgb(133, 91, 173);
 }
-  
+@media only screen and (max-width: 400px) {
+    body {
+      background-color: lightblue;
+    }
+  }
 
 

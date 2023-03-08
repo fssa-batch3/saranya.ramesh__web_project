@@ -1,11 +1,9 @@
-font-family: 'Fira Sans', sans-serif;
-font-family: 'Lato', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Slab', serif;
-
 *{
     box-sizing: border-box;
     
+}
+body{
+    background-color: whitesmoke;
 }
 .header p{
     font-size: 15px;  
@@ -16,10 +14,15 @@ font-family: 'Roboto Slab', serif;
     display:flex;
 
 }
+header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-end;
+}
 .navbar{
     margin-left:900px;
-    position:absolute;
-    top:20px;
+   
 }
 .navbar ul{
     display:flex;
@@ -45,14 +48,44 @@ font-family: 'Roboto Slab', serif;
     color:rgb(54, 45, 113);
     text-align: center;
 }
+.img img {
+    height:330px;
+    width:450px;
+}
+.img-2 img {
+    height:330px;
+    width:450px;
+}
 .flex{
     margin-top:50px;
-    display: flex;
-    border-style: solid;
-    border-width: 2px;
+    border-style: outset;
+    border-width: 5px;
     box-shadow: 5px;
     margin:100px;
     padding:20px;
+    display: flex;
+    justify-content: space-around;
+}
+.flex-2 {
+    margin-top:50px;
+    border-style: outset;
+    border-width: 5px;
+    box-shadow: 5px;
+    margin:100px;
+    padding:20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.flex:hover{
+    box-shadow:5px 5px 5px grey;
+  transform:scale(1.1);
+  transition:0.5s;
+}
+.flex-2:hover{
+    box-shadow:5px 5px 5px grey;
+    transform:scale(1.1);
+    transition:0.5s;
 }
 .para{
     padding:0px 50px;
@@ -63,28 +96,6 @@ font-family: 'Roboto Slab', serif;
     font-size: 30px;
 }
 .para p{
-    font-family: 'Roboto Slab', serif;
-}
-.checked{
-    color:orange;
-}
-.flex-2{
-    margin-top:50px;
-    display: flex;
-    border-style: solid;
-    border-width: 2px;
-    margin:100px;
-    padding:20px;
-}
-.para-2{
-    padding:0px 50px;
-    max-width: 500px;
-}
-.para-2 h2{
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-}
-.para-2 p{
     font-family: 'Roboto Slab', serif;
 }
 .checked{
