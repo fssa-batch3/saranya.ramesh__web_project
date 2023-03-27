@@ -14,6 +14,7 @@
 }
 .img{
     filter: blur(7px);
+    width: 100%;
 }
 .img-small{
     border-radius: 20px 0px 0px 20px;
@@ -26,12 +27,12 @@
 }
 .btn{
     position:relative;
-    top:20px;
+    top:10px;
     left:70px;
     background-color: rgb(72, 72, 206);
     color:white;
     padding:5px 30px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border-color:white;
 }
 .btn1{
@@ -44,7 +45,7 @@
     border-radius: 10px;
     border-color:white;
 }
-.btn2{
+/* .btn2{
     position:relative;
     top:60px;
     left:20px;
@@ -53,7 +54,7 @@
     padding:10px 10px 10px 50px;
     border-radius: 10px;
     border-color:white;
-}
+} */
 .heading{
     margin-left:70px;
     font-size:xx-large;
@@ -71,8 +72,9 @@
 }
 .flex{
     display:flex;
-    position:relative;
-    bottom:700px;
+    position:absolute;
+    top:250px;
+    /* bottom:700px; */
     left:250px;
 }
 .font-box{
