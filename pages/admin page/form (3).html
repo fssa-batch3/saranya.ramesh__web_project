@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>form</form>
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap');
+    </style>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <form role="form">
+
+        <label for="image"><b>Image</b></label>
+        <input type="text" placeholder="enter your url" id="image" />
+
+        <label for="heading"><b>Name</b></label>
+        <input type="text" placeholder="escape room" id="place_name" />
+
+        <label > Category</label>
+        <select id="category">
+            <option>select </option>
+            <option id="nungambakkam"> Nungambakkam </option>
+            <option id="guindy"> Guindy </option>
+            <option id="anna_nagar"> anna nagar </option>
+            <option id="malls"> malls </option>
+            <option id="temples"> temples </option>
+            <option id="amusements"> amusements </option>
+            <option id="beaches"> beaches </option>
+            <option id="parks_and_rooms"> parks and rooms </option>
+        </select> <br>
+
+        <label for="heading"><b>Description</b></label>
+        <input type="text" placeholder="short description" id="description" />
+
+        <label> For more details </label>
+        <input id = "detail_page"/>
+        <button type="submit" class="button" id="upload">create</button>
+    
+    </form>
+    <script>
+
+        document.getElementById("upload").addEventListener("click",
+            function register(e) {
+
+                e.preventDefault();
+
+
+                let category = document.getElementById("category").value;
+                let image = document.getElementById("image").value;
+                let place_name = document.getElementById("place_name").value;
+                let description = document.getElementById("description").value;
+                let detail_page = document.getElementById("detail_page").value;
+                let nungambakkam = document.getElementById("nungambakkam").value;
+                let guindy = document.getElementById("guindy").value;
+                let anna_nagar = document.getElementById("anna_nagar").value;
+                let malls = document.getElementById("malls").value;
+                let temples = document.getElementById("temples").value;
+                let amusements = document.getElementById("amusements").value;
+                let beaches = document.getElementById("beaches").value;
+                let parks_and_rooms = document.getElementById("parks_and_rooms").value;
+                unique_id = uuidv4();
+
+                if( category == nungambakkam ) { 
+                    let nungambakkam_details = JSON.parse(localStorage.getItem('nungambakkam_details')) || [];
+                    let exit = nungambakkam_details.some(data =>
+                        data.nungambakkam_details == nungambakkam_details ||
+                        data.place_name == place_name
+                    );
+                    if(!exit) {
+                        nungambakkam_details.push({
+                            "unique_id": unique_id,
+                            "image_link": image,
+                            "place_name": place_name,
+                            "description": description,
+                            "detail_page": detail_page
+                        });
+                        localStorage.setItem("nungambakkam_details", JSON.stringify(nungambakkam_details));
+                    }
+                    else{
+                        alert("Sorry, place name has already exist")
+                    }
+                }
+                else if(category == guindy) {
+                    let guindy_details = JSON.parse(localStorage.getItem('guindy_details')) || [];
+                    let exit = guindy_details.some(data =>
+                        data.guindy_details == guindy_details ||
+                        data.place_name == place_name
+                    );
+                    if(!exit) {
+                        guindy_details.push({
+                            "unique_id": unique_id,
+                            "image_link": image,
+                            "place_name": place_name,
+                            "description": description
+                        });
+                        localStorage.setItem("guindy_details", JSON.stringify(guindy_details));
+                        // localStorage.setItem("dhanuka_unique_id",JSON.stringify(unique_id));
+                    }
+                }
+                else if(category == anna_nagar) {
+                    let anna_nagar_details = JSON.parse(localStorage.getItem('anna_nagar_details')) || [];
+                    let exit = anna_nagar_details.some(data =>
+                        data.anna_nagar_details == anna_nagar_details ||
+                        data.place_name == place_name
+                    );
+                    if(!exit) {
+                        anna_nagar_details.push({
+                            "unique_id": unique_id,
+                            "image_link": image,
+                            "place_name": place_name,
+                            "description": description
+                        });
+                        localStorage.setItem("anna_nagar_details", JSON.stringify(anna_nagar_details));
+                        // localStorage.setItem("dhanuka_unique_id",JSON.stringify(unique_id));
+                    }
+                }
+                else if(category == malls) {
+                    let malls = JSON.parse(localStorage.getItem('malls')) || [];
+                    let exit = malls.some(data =>
+                        data.malls == malls ||
+                        data.place_name == place_name
+                    );
+                    if(!exit) {
+                        malls.push({
+                            "unique_id": unique_id,
+                            "image_link": image,
+                            "place_name": place_name,
+                            "description": description
+                        });
+                        localStorage.setItem("malls", JSON.stringify(malls));
+                        // localStorage.setItem("dhanuka_unique_id",JSON.stringify(unique_id));
+                    }
+                }
+                else if(category == temples) {
+                    let temples = JSON.parse(localStorage.getItem('temples')) || [];
+                    let exit = temples.some(data =>
+                        data.temples == temples ||
+                        data.place_name == place_name
+                    );
+                    if(!exit) {
+                        temples.push({
+                             "unique_id": unique_id,
+                            "image_link": image,
+                            "place_name": place_name,
+                            "description": description
+                        });
+                        localStorage.setItem("malls", JSON.stringify(malls));
+                        // localStorage.setItem("dhanuka_unique_id",JSON.stringify(unique_id));
+
+                    }
+                }
+                else if(category == amusements) {
+                    let  amusements = JSON.parse(localStorage.getItem('amusements')) || [];
+                    let exit =  amusements.some(data =>
+                        data. amusements ==  amusements ||
+                        data.place_name == place_name
+                    );
+                    if(!exit) {
+                         amusements.push({
+                            "unique_id": unique_id,
+                            "image_link": image,
+                            "place_name": place_name,
+                            "description": description
+                        });
+                        localStorage.setItem("malls", JSON.stringify(malls));
+                        // localStorage.setItem("dhanuka_unique_id",JSON.stringify(unique_id));
+                    }
+                }
+                document.querySelector("form").reset();
+                alert("Catergorey created successfully");
+                window.location.href =  "../admin page/U_D nungambakam.html"  ;
+            });
+
+            
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    
+</body>
+
+</html>
