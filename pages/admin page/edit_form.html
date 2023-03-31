@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>edit_form</form>
+    </title>
+    <meta name="viewport"  content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@900&display=swap');
+    </style>
+
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <form role="form">
+
+        <label for="image"><b>image</b></label>
+        <input type="text" placeholder="enter your url" id="image" />
+
+        <label for="heading"><b>name</b></label>
+        <input type="text" placeholder="escape room" id="place_name" />
+
+        <label > Category</label>
+        <select id="category">
+            <option>select </option>
+            <option id="nungambakkam"> Nungambakkam </option>
+            <option id="guindy"> Guindy </option>
+            <option id="anna_nagar"> anna nagar </option>
+            <option id="malls"> malls </option>
+            <option id="temples"> temples </option>
+            <option id="amusements"> amusements </option>
+            <option id="beaches"> beaches </option>
+            <option id="parks_and_rooms"> parks and rooms </option>
+        </select> <br>
+
+        <label for="heading"><b>description</b></label>
+        <input type="text" placeholder="short description" id="description" />
+
+    <button type="submit" class="button" onclick="update(event)">save</button>
+
+    </form>
+</body>
+<script>
+    let nungambakkam = JSON.parse(localStorage.getItem('nungambakkam_details'));
+    let Id = JSON.parse(localStorage.getItem('Id'));
+    
+    function user_unique(e){
+    return e.unique_id == Id;
+}
+    let places_data = nungambakkam.find(user_unique); 
+
+    console.log(places_data);
+    document.getElementById("image").value = places_data["image_link"];
+    document.getElementById("place_name").value = places_data["place_name"];
+    document.getElementById("description").value = places_data["description"];
+
+    function update(event){
+    event.preventDefault();
+
+    let up_image = document.getElementById("image").value;
+    let up_place_name = document.getElementById("place_name").value;
+    let up_description = document.getElementById("description").value;
+
+    places_data["image"] = up_image;
+    places_data["place_name"] = up_place_name;
+    places_data["description"] =  up_description;
+
+    console.log(places_data);
+
+    localStorage.setItem("nungambakkam_details", JSON.stringify(nungambakkam));
+    window.location.href = "../other pages/U_D nungambakam.html";
+    
+}
+
+
+// let indexofplaces = places.indexof(place_name);
+
+// places.splice(indexofplaces, 1);
+// console.log(places);
+// localStorage.setItem("places", JSON.stringify(places));
+
+// //     if(category == nungambakkam) {
+
+   
+
+//    function update(event){
+//     event.preventDefault();
+//     let up_image = document.getElementById("image").value;
+//     let up_place_name = document.getElementById("place_name").value;
+//     let up_description = document.getElementById("description").value;
+
+//     places["image"] = up_image;
+//     places["place_name"] = up_place_name;
+//     places["description"] =  up_description;
+//     localStorage.setitem("places", JSON.stringify(places));
+//     window.location.href = "../other pages/form (3).html";
+// }
+
+
+// //     }
+    
+    // if(category == nungambakkam) {
+    //     let nungambakkam_details = JSON.parse(localStorage.getItem('nungambakkam_details')) || [];
+    //     let exit = nungambakkam_details.some(data =>
+    //         data.nungambakkam_details == nungambakkam_details ||
+    //         data.place_name == place_name
+    //     );
+    //     if(!exit) {
+    //         nungambakkam_details.push({
+    //             "unique_id": unique_id,
+    //             "image_link": image,
+    //             "place_name": place_name,
+    //             "description": description
+    //         });
+    //         localStorage.setItem("nungambakkam_details", JSON.stringify(nungambakkam_details));
+            // localStorage.setItem("dhanuka_unique_id",JSON.stringify(unique_id));
+    //     }
+    // }
+</script>
+</html>
