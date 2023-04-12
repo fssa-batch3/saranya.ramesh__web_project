@@ -68,16 +68,17 @@
       }
     }
 
-    // let logout_btn = document.getElementById("logout")
-    // console.log(logout_btn);
-    // logout_btn.addEventListener("click",logout)
+    let logout_btn = document.getElementById("logout")
+    console.log(logout_btn);
+    logout_btn.addEventListener("click",logout)
 
-    // function logout(){
-    //   localStorage.setItem("unique_id", JSON.stringify(""));
-    //   window.location.href = "../index/login.html"
-    // }
+    function logout(){
+      localStorage.setItem("unique_id", JSON.stringify(""));
+      window.location.href = "../index/login.html"
+    }
     
   </script>
+  <script src="../index/header.js"></script>
+  
 </body>
-<script src="../index/header.js"></script>
 </html>

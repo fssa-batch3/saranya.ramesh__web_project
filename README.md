@@ -10,9 +10,10 @@ Wire frame:
 
 Scenario 1 : Successfully create an account.
    Steps:
-      1. Navigation to registration page.
-      2. Enter the required information such as First name, last name, email and password.
-      3. Click "Register" button.
+      1. Navigation to login page.
+      2. click on create an account if doesn't have account.
+      3. Enter the required information such as First name, last name, email and password.
+      4. Click "Register" button.
    Expected result: 
       The user is redirect to login page.
 
@@ -79,4 +80,3 @@ Scenario 1 : Successfully create places.
 
    Expected result:
       The user can view the details of the selected places detail.
-      
